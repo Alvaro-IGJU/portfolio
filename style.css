@@ -12,8 +12,9 @@ header {
     height: 100px;
     width: 100%;
     z-index: 100;
-    background-color: rgb(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
+    /*background-color: rgba(255, 255, 255, 0.5);*/
+    backdrop-filter: blur(7px);
+    box-shadow: 5px 5px  50px #b1b1b1;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -76,8 +77,24 @@ header {
     font-size: 2em;
 }
 
+#aboutContent{
+    background-image: linear-gradient(180deg, rgb(179, 179, 179),rgb(0, 0, 0) );
+    height: 1000px;
+}
+
 #arrow{
     width: 5%;
     margin: auto;
     margin-top: 7%;
+    cursor: pointer;
+    animation-name: floating;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;  
+    animation-timing-function: ease-in-out;
 }
+
+@keyframes floating {
+    from {margin-top: 7%;}
+    to {margin-top: 10%;}
+  }
