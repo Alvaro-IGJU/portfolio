@@ -3,6 +3,13 @@ html {
   scroll-behavior: smooth;
 }
 
+section{
+    z-index: 50;
+}
+
+section *{
+    z-index: 70;
+}
 body {
     margin: 0;
     padding: 0;
@@ -28,7 +35,30 @@ header {
 
 #name {
     margin-left: 2%;
+   
 }
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+   
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 .green{
     color: rgb(118, 168, 152);
 }
@@ -52,7 +82,23 @@ header {
     font-size: 1.2em;
     color: rgb(0, 0, 0);
 }
-
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(118, 168, 152);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
 .link:hover, .link:visited:hover  {
     cursor: pointer;
     color: rgb(118, 168, 152);
@@ -111,7 +157,18 @@ header {
 #arrow img{
     width: 25%;
 }
+
+.parallax{
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 2500px;
+    z-index: 60;
+    background-color: rgba(255, 255, 255, 0);
+}
 @keyframes floating {
     from {margin-top: 7%;}
     to {margin-top: 10%;}
   }
+
